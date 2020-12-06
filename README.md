@@ -2,7 +2,12 @@
 
 Template code generated from [StartBootStart/Clean-Blog](https://github.com/StartBootstrap/startbootstrap-clean-blog)
 
-# Additions
+# About
+
+This is the public repo for my personal blog. Template is from StartBootStart but with some modifications.
+
+
+# Modifications
 
 Created a directory to hold all posts.
 
@@ -12,4 +17,6 @@ Removed contact page.
 
 Removed Facebook and Twitter links in footers. Added LinkedIn Link.
 
+# License
 
+[MIT](https://opensource.org/licenses/MIT)
