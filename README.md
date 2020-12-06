@@ -30,9 +30,16 @@ Removed contact page.
 
 Removed Facebook and Twitter links in footers. Added LinkedIn Link.
 
+# Planned Modifications
+
+Add a projects page to hold all current and past project links and information on each project.
+
+
+
 # Issues
 
 Find something wrong? Please [Open a new issue](https://github.com/AlbinoGazelle/nburns.tech/issues) and I'll take a look ASAP.
+
 # License
 
 [MIT](https://opensource.org/licenses/MIT)
