@@ -25,6 +25,9 @@ Removed contact page.
 
 Removed Facebook and Twitter links in footers. Added LinkedIn Link.
 
+# Issues
+
+Find something wrong? Please [Open a new issue](https://github.com/AlbinoGazelle/nburns.tech/issues) and I'll take a look ASAP.
 # License
 
 [MIT](https://opensource.org/licenses/MIT)
