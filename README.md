@@ -5,6 +5,11 @@ Template code generated from [StartBootStart/Clean-Blog](https://github.com/Star
 # About
 
 This is the public repo for my personal blog. Template is from StartBootStart but with some modifications.
+This framework has 3 main pages. Home, About, and Directory.  
+
+**Home** holds links and descriptions to the four most recent posts.  
+**About** holds info about myself and who I am.  
+**Directory** contains links to every post on the website.  
 
 # Usage
 
