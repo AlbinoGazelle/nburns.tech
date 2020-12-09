@@ -77,17 +77,17 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('../img/post-bg.jpg')">
+  <header class="masthead" style="background-image: url('../img/brandon-green-GEyXGTY2e9w-unsplash.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Man must explore, and this is exploration at its greatest</h1>
-            <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+            <h1>Network Monitoring On A Budget</h1>
+            <h2 class="subheading">Want to monitor your network without breaking the bank? Check this out.</h2>
             <span class="meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2019</span>
+              <a href="../about.html">Nathan Burns</a>
+              on December 8th, 2020</span>
           </div>
         </div>
       </div>
@@ -99,42 +99,37 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+          <p>I was fairly bored over thanksgiving weekend so I thought it'll be a good time to finally setup some home network monitoring I've been wanting to do for awhile. I had some raspberry pi 4's collecting dust so I decided to use them as hosts.</p>
 
-          <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+          <p><h1>Materials</h1></p>
 
-          <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+            <a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/?resellerType=home"> Two Raspberry Pi 4's</a>
+            <p>Any network switch capable of port mirroring. I used <a href="https://www.amazon.com/gp/product/B00K4DS5KU">this one</a> available on Amazon.</p>
+            <p>Spare ethernet cables for connecting everything</p>
+            <p>Micro SD card reader (The Pi's come with micro SD cards but you'll need some way to format them) </p>
+        
+          <p><h1>Getting Started</h1></p>
 
-          <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+          <p>The first thing you'll want to do is format each SD card (you should have two). Select the raspian (32-bit) image using the Pi imager available on <a href="https://www.raspberrypi.org/software/"> the raspberry pi foundations website.</a> If you don't feel like plugging in 
+          keyboards, mice and monitors you can create a file called "ssh" and put it in the root directory of the boot partition of the SD card. This will enable ssh on startup then you can use your router to find it's IP address and connect.</p>
+          <p> Set up port mirroring on your switch and connect one Pi to that port. This will be the Pi you'll be installing ntop on.</p>
 
-          <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
+    
+          <h2 class="section-heading">Installation</h2>
 
-          <h2 class="section-heading">The Final Frontier</h2>
+          <p>Install ntop on the Pi connected to the mirrored port. Once installed you should be able to navigate to it's web interface at http://insert_pi_ip_here:3000</p>
+          <p>If everythings correctly configured, you should see every device on your network and the traffic associated with each device.</p>
+          <p>For extra control over your network, you can configure the second pi as a DNS server using pi-hole. This enable more data collection and allows you to block ads throughout your entire network.</p>
 
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
 
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
+          
+          <h2 class="section-heading">What's Next</h2>
 
-          <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+          <p>Ntop has a very robust alert system. Do some research and figure out what alerts you want on your own network. I personally have alerts setup for receiving data from select countries or if any of my hosts go down.</p>
 
-          <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
-
-          <h2 class="section-heading">Reaching for the Stars</h2>
-
-          <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
-
-          <a href="#">
-            <img class="img-fluid" src="../img/post-sample-image.jpg" alt="">
-          </a>
-          <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
-
-          <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
-
-          <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-
-          <p>Placeholder text by
-            <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
-            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+        <h2 class="section-heading">Conclusion</h2>
+            <p>Overall you should have a very robust and configurable network monitoring system for about $80. Ntop allows for a lot of customization and configuration to suit whatever needs you might have while pi-hole allows for more configuration of your network as a whole and network wide ad blocking.</p>
+            <img class="img-fluid" src="../img/raymond-culbertson-xnQaH8qF0Rc-unsplash.jpg" alt="">
         </div>
       </div>
     </div>
